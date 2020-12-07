@@ -7,21 +7,21 @@
 #include "constants.h"
 #include "files.h"
 
-int loadLevel(int level[][NB_BLOCS_HEIGHT])
+int loadLevel(int level[][NB_BLOCKS_HEIGHT])
 {
     FILE* file = NULL;
-    char lineFile[NB_BLOCKS_WIDTH * NB_BLOCS_HEIGHT + 1] = {0};
+    char lineFile[NB_BLOCKS_WIDTH * NB_BLOCKS_HEIGHT + 1] = {0};
     int i = 0;
 	int j = 0;
 
     file = fopen("Levels", "r");
     if (file == NULL) return 0;
 
-    fgets(lineFile, NB_BLOCKS_WIDTH * NB_BLOCS_HEIGHT + 1, file);
+    fgets(lineFile, NB_BLOCKS_WIDTH * NB_BLOCKS_HEIGHT + 1, file);
 
     for (i = 0 ; i < NB_BLOCKS_WIDTH ; i++)
     {
-        for (j = 0 ; j < NB_BLOCS_HEIGHT ; j++)
+        for (j = 0 ; j < NB_BLOCKS_HEIGHT ; j++)
         {
             switch (lineFile[(i * NB_BLOCKS_WIDTH) + j])
             {
@@ -48,7 +48,7 @@ int loadLevel(int level[][NB_BLOCS_HEIGHT])
     return 1;
 }
 
-int saveLevel(int level[][NB_BLOCS_HEIGHT])
+int saveLevel(int level[][NB_BLOCKS_HEIGHT])
 {
     FILE* file = NULL;
     int i = 0, j = 0;
@@ -58,7 +58,7 @@ int saveLevel(int level[][NB_BLOCS_HEIGHT])
 
     for (i = 0 ; i < NB_BLOCKS_WIDTH ; i++)
     {
-        for (j = 0 ; j < NB_BLOCS_HEIGHT ; j++)
+        for (j = 0 ; j < NB_BLOCKS_HEIGHT ; j++)
         {
             fprintf(file, "%d", level[j][i]);
         }
