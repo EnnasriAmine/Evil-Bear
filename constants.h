@@ -3,8 +3,8 @@
 
     #define BLOCK_SIZE  34 
     #define NB_BLOCKS_WIDTH    20
-    #define NB_BLOCS_HEIGHT    20
-    #define HEIGHT_WINDOW     BLOCK_SIZE * NB_BLOCS_HEIGHT
+    #define NB_BLOCKS_HEIGHT    20
+    #define HEIGHT_WINDOW     BLOCK_SIZE * NB_BLOCKS_HEIGHT
     #define WIDTH_WINDOW     BLOCK_SIZE * NB_BLOCKS_WIDTH
 
 
