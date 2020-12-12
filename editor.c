@@ -94,5 +94,37 @@ void editor(SDL_Surface* screen)
 
 
         SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, 255, 255, 255));
+        
+        for (i = 0 ; i < NB_BLOCKS_WIDTH ; i++)
+        {
+            for (j = 0 ; j < NB_BLOCKS_HEIGHT ; j++)
+            {
+                position.x = i * BLOCK_SIZE;
+                position.y = j * BLOCK_SIZE;
 
+                switch(map[i][j])
+                {
+                    case WALL:
+                        SDL_BlitSurface(wall, NULL, screen, &position);
+                        break;
+                    case RECIPE:
+                        SDL_BlitSurface(recipe, NULL, screen, &position);
+                        break;
+                    case FLAME:
+                        SDL_BlitSurface(flame, NULL, screen, &position);
+                        break;
+                    case BEAR:
+                        SDL_BlitSurface(bear, NULL, screen, &position);
+                        break;
+                }
+            }
+        }
+
+        SDL_Flip(screen);
+    }
+
+    SDL_FreeSurface(wall);
+    SDL_FreeSurface(recipe);
+    SDL_FreeSurface(flame);
+    SDL_FreeSurface(bear);
 }
