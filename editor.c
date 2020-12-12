@@ -14,10 +14,10 @@ void editor(SDL_Surface* screen)
     SDL_Event event;
 
     int go_on = 1;
-	int LeftclickOngoing = 0;
-	int RightclickOngoing = 0;
+    int LeftclickOngoing = 0;
+    int RightclickOngoing = 0;
     int currentObject = WALL,
-	int i = 0, j = 0;
+    int i = 0, j = 0;
     int map[NB_BLOCKS_WIDTH][NB_BLOCS_HEIGHT] = {0};
 
     wall = IMG_Load("wall.png");
