@@ -16,7 +16,7 @@ void editor(SDL_Surface* screen)
     int go_on = 1;
     int LeftclickOngoing = 0;
     int RightclickOngoing = 0;
-    int currentObject = WALL,
+    int currentObject = WALL;
     int i = 0, j = 0;
     int map[NB_BLOCKS_WIDTH][NB_BLOCS_HEIGHT] = {0};
 
