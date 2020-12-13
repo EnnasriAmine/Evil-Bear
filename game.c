@@ -174,4 +174,55 @@ void movePlayer(int map[][NB_BLOCKS_HEIGHT], SDL_Rect *pos, int direction)
             pos->y++;
             break;
 
+
+        case LEFT:
+            if (pos->x - 1 < 0)
+                break;
+            if (map[pos->x - 1][pos->y] == WALL)
+                break;
+
+            if ((map[pos->x - 1][pos->y] == RECIPE || map[pos->x - 1][pos->y] == RECIPE_READY) &&
+                (pos->x - 2 < 0 || map[pos->x - 2][pos->y] == WALL ||
+                map[pos->x - 2][pos->y] == RECIPE || map[pos->x - 2][pos->y] == RECIPE_READY))
+                break;
+
+
+            moveRecipe(&map[pos->x - 1][pos->y], &map[pos->x - 2][pos->y]);
+
+            pos->x--;
+            break;
+
+
+        case RIGHT:
+            if (pos->x + 1 >= NB_BLOCKS_WIDTH)
+                break;
+            if (map[pos->x + 1][pos->y] == WALL)
+                break;
+
+            if ((map[pos->x + 1][pos->y] == RECIPE || map[pos->x + 1][pos->y] == RECIPE_READY) &&
+                (pos->x + 2 >= NB_BLOCKS_WIDTH || map[pos->x + 2][pos->y] == WALL ||
+                map[pos->x + 2][pos->y] == RECIPE || map[pos->x + 2][pos->y] == RECIPE_READY))
+                break;
+
+            moveRecipe(&map[pos->x + 1][pos->y], &map[pos->x + 2][pos->y]);
+
+            pos->x++;
+            break;
+    }
+}
+
+void moveRecipe(int *firstBox, int *secondBox)
+{
+    if (*firstBox == RECIPE || *firstBox == RECIPE_READY)
+    {
+        if (*secondBox == FLAME)
+            *secondBox = RECIPE_READY;
+        else
+            *secondBox = RECIPE;
+
+        if (*firstBox == RECIPE_READY)
+            *firstBox = FLAME;
+        else
+            *firstBox = VOID;
+    }
 }
