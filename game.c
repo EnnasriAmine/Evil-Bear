@@ -52,36 +52,36 @@ void play(SDL_Surface* screen)
     while (go_on)
     {
         SDL_WaitEvent(&event);
-		switch(event.type)
-		{
-			case SDL_QUIT:
-				go_on = 0;
-				break;
-			case SDL_KEYDOWN:
-				switch(event.key.keysym.sym)
-				{
-					case SDLK_ESCAPE:
-						go_on = 0;
-						break;
-					case SDLK_UP:
-						currentBear = bear[UP];
-						movePlayer(map, &playerPosition, UP);
-						break;
-					case SDLK_DOWN:
-						currentBear = bear[DOWN];
-						movePlayer(map, &playerPosition, DOWN);
-						break;
-					case SDLK_RIGHT:
-						currentBear = bear[RIGHT];
-						movePlayer(map, &playerPosition, RIGHT);
-						break;
-					case SDLK_LEFT:
-						currentBear = bear[LEFT];
-						movePlayer(map, &playerPosition, LEFT);
-						break;
-				}
-				break;
-		}
+	switch(event.type)
+	{
+		case SDL_QUIT:
+			go_on = 0;
+			break;
+		case SDL_KEYDOWN:
+			switch(event.key.keysym.sym)
+			{
+				case SDLK_ESCAPE:
+					go_on = 0;
+					break;
+				case SDLK_UP:
+					currentBear = bear[UP];
+					movePlayer(map, &playerPosition, UP);
+					break;
+				case SDLK_DOWN:
+					currentBear = bear[DOWN];
+					movePlayer(map, &playerPosition, DOWN);
+					break;
+				case SDLK_RIGHT:
+					currentBear = bear[RIGHT];
+					movePlayer(map, &playerPosition, RIGHT);
+					break;
+				case SDLK_LEFT:
+					currentBear = bear[LEFT];
+					movePlayer(map, &playerPosition, LEFT);
+					break;
+			}
+			break;
+	}
 
         SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, 255, 255, 255));
 
