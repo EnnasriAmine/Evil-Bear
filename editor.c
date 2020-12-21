@@ -44,24 +44,24 @@ void editor(SDL_Surface* screen)
                 }
                 else if (event.button.button == SDL_BUTTON_RIGHT)
                 {
-                    map[event.button.x / BLOCK_SIZE][event.button.y /BLOCK_SIZE] = VIDE;
-                    RightclickOngoin = 1;
+                    map[event.button.x / BLOCK_SIZE][event.button.y /BLOCK_SIZE] = VOID;
+                    RightclickOngoing = 1;
                 }
                 break;
             case SDL_MOUSEBUTTONUP: 
                 if (event.button.button == SDL_BUTTON_LEFT)
                     LeftclickOngoing = 0;
                 else if (event.button.button == SDL_BUTTON_RIGHT)
-                    RightclickOngoin = 0;
+                    RightclickOngoing = 0;
                 break;
             case SDL_MOUSEMOTION:
                 if (LeftclickOngoing)
                 {
                     map[event.motion.x / BLOCK_SIZE][event.motion.y / BLOCK_SIZE] = currentObject;
                 }
-                else if (RightclickOngoin) 
+                else if (RightclickOngoing) 
                 {
-                    map[event.motion.x / BLOCK_SIZE][event.motion.y /BLOCK_SIZE] = VIDE;
+                    map[event.motion.x / BLOCK_SIZE][event.motion.y /BLOCK_SIZE] = VOID;
                 }
                 break;
             case SDL_KEYDOWN:
