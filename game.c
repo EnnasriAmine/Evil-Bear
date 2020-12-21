@@ -23,7 +23,7 @@ void play(SDL_Surface* screen)
     recipe_ready = IMG_Load("recipe_ready.png");
     flame = IMG_Load("flame.png");
     bear[DOWN] = IMG_Load("bear_down.png");
-    bear[GAUCHE] = IMG_Load("bear_left.png");
+    bear[LEFT] = IMG_Load("bear_left.png");
     bear[UP] = IMG_Load("bear_up.png");
     bear[RIGHT] = IMG_Load("bear_right.png");
 
