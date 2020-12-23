@@ -27,4 +27,38 @@ int main(int argc, char *argv[])
   menuPosition.x = 0;
   menuPosition.y = 0;
   
+   while (go_on)
+   {
+        SDL_WaitEvent(&event);
+        switch(event.type)
+        {
+            case SDL_QUIT:
+                go_on = 0;
+                break;
+            case SDL_KEYDOWN:
+                switch(event.key.keysym.sym)
+                {
+                    case SDLK_ESCAPE:
+						go_on= 0;
+                        break;
+                    case SDLK_KP1:
+                        play(screen);
+                        break;
+                    case SDLK_KP2:
+                        editor(screen);
+                        break;
+                }
+                break;
+        }
+
+        SDL_FillRect(screen, NULL, SDL_MapRGB(screen->format, 0, 0, 0));
+        SDL_BlitSurface(menu, NULL, screen, &menuPosition);
+        SDL_Flip(screen);
+    }
+
+    SDL_FreeSurface(menu);
+    SDL_Quit();
+
+    return EXIT_SUCCESS;
+  
 }
