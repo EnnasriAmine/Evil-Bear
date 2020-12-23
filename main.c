@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
                 switch(event.key.keysym.sym)
                 {
                     case SDLK_ESCAPE:
-						go_on= 0;
+			go_on= 0;
                         break;
                     case SDLK_KP1:
                         play(screen);
