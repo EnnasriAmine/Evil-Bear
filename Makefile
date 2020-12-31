@@ -7,5 +7,6 @@ build:
 	-lmingw32 \
 	-lSDLmain \
 	-lSDL \
+	-lSDL_image \
 	-o Evil_bear.exe
 	
