@@ -76,6 +76,9 @@ void editor(SDL_Surface* screen)
                     case SDLK_c:
                         loadLevel(map);
                         break;
+					case SDLK_KP0:
+						currentObject = VOID;
+						break;
                     case SDLK_KP1:
                         currentObject = WALL;
                         break;

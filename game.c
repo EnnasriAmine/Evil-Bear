@@ -25,7 +25,7 @@ void play(SDL_Surface* screen)
     bear[DOWN] = IMG_Load("bear_down.png");
     bear[LEFT] = IMG_Load("bear_left.png");
     bear[UP] = IMG_Load("bear_up.png");
-    bear[RIGHT] = IMG_Load("bear_right.png");
+    bear[RIGHT] = IMG_Load("bear_rigth.png");
 
     currentBear = bear[DOWN];
 
