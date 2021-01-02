@@ -30,6 +30,4 @@ Pour changer une case quelconque(Bear, flame,...), avec:
   
 A la fin de ses changements faudra appuyer sur S pour sauvegarder la nouvelle carte et pouvoir jouer avec la prochaine fois, et sur ESC pour revenir au menu principal.
 
-Le dernier information très importante, c'est la possibilité de réinitialiser le jeu( touts les objets revient à leures postions initiales). Si au cours du jeu, vous êtes coincé et vous voudrez rejouer sans avoir besoin de revenir au menu(ESC + 1), il suffit d'appuyer sur 0 et c'est fait.
-
-C'est à vous de jouer maintenant ;) 
+C'est à vous de jouer maintenant ;)
