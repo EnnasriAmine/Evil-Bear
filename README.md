@@ -1,5 +1,5 @@
 # Evil_Bear
-Evil Bear est un jeu vidéo où le BEAR doit décplacer toutes les recettes vers les flammes, le but étant de faire cuire toutes les recettes présentes sur les marmites pour gagner.
+Evil Bear est un jeu vidéo où le BEAR doit décplacer toutes les recettes(marmites) vers les flammes, le but étant de faire cuire toutes les recettes présentes sur les marmites pour gagner.
 
 Le jeu commence par afficher un menu avec deux choix:
 
@@ -19,4 +19,17 @@ Comment effectuer ces changements de niveaus?
 
 Pour changer une case quelconque(Bear, flame,...), avec:
   - Le vide: 0 + cliquer autant des fois que vous voulez sur les cases que vous voulez modifier;
+  - Le mur : 1 + cliquer autant des fois que vous voulez sur les cases que vous voulez modifier;
+  - La marmite : 2 + cliquer autant des fois que vous voulez sur les cases que vous voulez modifier;
+  - La flame: 3 + cliquer autant des fois que vous voulez sur les cases que vous voulez modifier;
+  - Le "Bear": 4 + cliquer autant des fois que vous voulez sur les cases que vous voulez modifier.
   
+ Si vous avez effectué un changement et vous êtes sûr de ce changement, appuyer sur S pour sauvegarder le changement.
+ 
+ Si vous avez regretté des changements effectué, vous pouvez supprimer les changements effectué après le dernièr sauvegarde avec le boutton C.
+  
+A la fin de ses changements faudra appuyer sur S pour sauvegarder la nouvelle carte et pouvoir jouer avec la prochaine fois, et sur ESC pour revenir au menu principal.
+
+Le dernier information très importante, c'est la possibilité de réinitialiser le jeu( touts les objets revient à leures postions initiales). Si au cours du jeu, vous êtes coincé et vous voudrez rejouer sans avoir besoin de revenir au menu(ESC + 1), il suffit d'appuyer sur 0 et c'est fait.
+
+C'est à vous de jouer maintenant ;) 
