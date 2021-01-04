@@ -3,7 +3,7 @@ Evil Bear est un jeu vidéo où le BEAR doit décplacer toutes les recettes(marm
 
 
 Poura compiler(Windows):
- 1. Déposer par exemple le dossiera source au répertoire Windows(C:);
+ 1. Déposer par exemple le dossier source au répertoire Windows(C:);
  2. Ouvrir l'invite des commandes;
  3. Accéder au répertoire, par exemple pour notre cas Windows(C:), (cd.. et appuyer sur entrer, encore une fois cd.., et ensuite cd src(le dossier qui contient le projet);
  4. En fin appuyer sur make, si aucun message afficher cela veut dire  que tout est bien passé, sinon vous verrez un messgae d'erreur qui explique le problème( soit la commande"make" n'ont reconnue, soit compilateur "gcc" intouvable) donc il faudra essayer d'installer tout ce qui est demandé dans les messages dans le cas où ils sont pas présents sur votre ordinateur;
